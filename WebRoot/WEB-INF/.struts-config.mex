@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/bookingRequests.do" location="50,50" dimension="204,96" />
+  <StrutsActivity path="/search_Booking.do" location="950,50" dimension="197,96" />
+  <StrutsActivity path="/adminLogin.do" location="950,250" dimension="179,96" />
+  <StrutsActivity path="/paymentdone.do" location="405,570" dimension="187,96" />
+  <StrutsActivity path="/search_paymentdone.do" location="120,585" dimension="227,106" />
+  <StrutsActivity path="/Admin/search_Booking.jsp" location="350,250" dimension="177,51" />
+  <StrutsActivity path="Admin/bookingRequests.jsp" location="350,50" dimension="180,51" />
+  <StrutsActivity path="/Admin/DisplayTag_SearchBooking.jsp" location="650,250" dimension="236,51" />
+  <StrutsActivity path="Admin/search_Booking.jsp" location="50,250" dimension="172,51" />
+  <StrutsActivity path="/Admin/AdminLoginFailure.jsp" location="350,450" dimension="195,51" />
+  <StrutsActivity path="/Admin/home.jsp" location="650,450" dimension="125,51" />
+  <StrutsActivity path="Admin/adminLogin.jsp" location="50,450" dimension="153,51" />
+  <StrutsActivity path="/Admin/search_paymentdone.jsp" location="375,780" dimension="207,51" />
+  <StrutsActivity path="/Admin/paymentdone.jsp" location="750,600" dimension="168,51" />
+  <StrutsActivity path="/Admin/Displaytag_paymentdone.jsp" location="765,720" dimension="228,51" />
+  <StrutsActivity path="/Admin/DisplayBookingRequest.jsp" location="650,50" dimension="218,51" />
+  <StrutsActivity path="/mycustomer.do" location="540,915" dimension="180,96" />
+  <StrutsActivity path="/Admin/mycustomer.jsp" location="795,1095" dimension="161,51" />
+  <StrutsActivity path="/search_mycustomer.do" location="255,930" dimension="220,96" />
+  <StrutsActivity path="/Admin/search_mycustomer.jsp" location="330,1155" dimension="200,51" />
+  <StrutsActivity path="/Admin/DisplayTag_mycustomer.jsp" location="45,1140" dimension="224,51" />
+  <StrutsTransition id="/search_paymentdone.do,success,/Admin/Displaytag_paymentdone.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="263,691" />
+      <AbsolutePoint location="263,745" />
+      <AbsolutePoint location="765,745" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Admin/search_mycustomer.jsp,null,/search_mycustomer.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="449,1155" />
+      <AbsolutePoint location="449,1026" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mycustomer.do,success,/Admin/search_mycustomer.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,1011" />
+      <AbsolutePoint location="630,1180" />
+      <AbsolutePoint location="530,1180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adminLogin.do,failure,/Admin/AdminLoginFailure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1039,346" />
+      <AbsolutePoint location="1039,391" />
+      <AbsolutePoint location="447,391" />
+      <AbsolutePoint location="447,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/search_Booking.do,success,/Admin/DisplayTag_SearchBooking.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,116" />
+      <AbsolutePoint location="768,116" />
+      <AbsolutePoint location="768,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="Admin/bookingRequests.jsp,null,/bookingRequests.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,75" />
+      <AbsolutePoint location="254,75" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/paymentdone.do,success,/Admin/search_paymentdone.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="478,666" />
+      <AbsolutePoint location="478,780" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="Admin/search_Booking.jsp,null,/search_Booking.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="136,250" />
+      <AbsolutePoint location="136,191" />
+      <AbsolutePoint location="1018,191" />
+      <AbsolutePoint location="1018,146" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adminLogin.do,success,/Admin/home.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1069,346" />
+      <AbsolutePoint location="1069,421" />
+      <AbsolutePoint location="712,421" />
+      <AbsolutePoint location="712,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/search_mycustomer.do,success,/Admin/DisplayTag_mycustomer.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="255,978" />
+      <AbsolutePoint location="157,978" />
+      <AbsolutePoint location="157,1140" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="Admin/adminLogin.jsp,null,/adminLogin.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="126,450" />
+      <AbsolutePoint location="126,316" />
+      <AbsolutePoint location="950,316" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Admin/search_paymentdone.jsp,null,/search_paymentdone.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="390,780" />
+      <AbsolutePoint location="390,638" />
+      <AbsolutePoint location="347,638" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Admin/paymentdone.jsp,null,/paymentdone.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="750,625" />
+      <AbsolutePoint location="592,625" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Admin/mycustomer.jsp,null,/mycustomer.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="875,1095" />
+      <AbsolutePoint location="875,963" />
+      <AbsolutePoint location="720,963" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bookingRequests.do,success,/Admin/search_Booking.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="254,116" />
+      <AbsolutePoint location="438,116" />
+      <AbsolutePoint location="438,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

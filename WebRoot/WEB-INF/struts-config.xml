@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="bookingRequestsForm" type="Admin.BookingRequestsForm" />
+    <form-bean name="search_BookingForm" type="Admin.Search_BookingForm" />
+    <form-bean name="adminLoginForm" type="Admin.AdminLoginForm" />
+    <form-bean name="paymentdoneForm" type="Admin.PaymentdoneForm" />
+    <form-bean name="search_paymentdoneForm" type="com.yourcompany.struts.form.Search_paymentdoneForm" />
+    <form-bean name="mycustomerForm" type="Admin.MycustomerForm" />
+    <form-bean name="search_mycustomerForm" type="Admin.Search_mycustomerForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="bookingRequestsForm"
+      input="Admin/bookingRequests.jsp"
+      name="bookingRequestsForm"
+      path="/bookingRequests"
+      scope="request"
+      type="Admin.BookingRequestsAction">
+      <set-property property="cancellable" value="true" />
+      <forward
+        name="success"
+        path="/Admin/search_Booking.jsp"
+        redirect="true" />
+    </action>
+    <action
+      attribute="search_BookingForm"
+      input="Admin/search_Booking.jsp"
+      name="search_BookingForm"
+      path="/search_Booking"
+      scope="request"
+      type="Admin.Search_BookingAction">
+      <set-property property="cancellable" value="true" />
+      <forward
+        name="success"
+        path="/Admin/DisplayTag_SearchBooking.jsp"
+        redirect="true" />
+    </action>
+    <action
+      attribute="adminLoginForm"
+      input="Admin/adminLogin.jsp"
+      name="adminLoginForm"
+      path="/adminLogin"
+      scope="request"
+      type="Admin.AdminLoginAction">
+      <set-property property="cancellable" value="true" />
+      <forward
+        name="failure"
+        path="/Admin/AdminLoginFailure.jsp"
+        redirect="true" />
+      <forward
+        name="success"
+        path="/Admin/home.jsp"
+        redirect="true" />
+    </action>
+    <action
+      attribute="paymentdoneForm"
+      input="/Admin/paymentdone.jsp"
+      name="paymentdoneForm"
+      path="/paymentdone"
+      scope="request"
+      type="Admin.PaymentdoneAction">
+      <set-property property="cancellable" value="true" />
+      <forward
+        name="success"
+        path="/Admin/search_paymentdone.jsp"
+        redirect="true" />
+    </action>
+    <action
+      attribute="search_paymentdoneForm"
+      input="/Admin/search_paymentdone.jsp"
+      name="search_paymentdoneForm"
+      path="/search_paymentdone"
+      scope="request"
+      type="Admin.Search_paymentdoneAction">
+      <set-property property="cancellable" value="true" />
+      <forward
+        name="success"
+        path="/Admin/Displaytag_paymentdone.jsp"
+        redirect="true" />
+    </action>
+    <action
+      attribute="mycustomerForm"
+      input="/Admin/mycustomer.jsp"
+      name="mycustomerForm"
+      path="/mycustomer"
+      scope="request"
+      type="Admin.MycustomerAction">
+      <set-property property="cancellable" value="true" />
+      <forward
+        name="success"
+        path="/Admin/search_mycustomer.jsp"
+        redirect="true" />
+    </action>
+    <action
+      attribute="search_mycustomerForm"
+      input="/Admin/search_mycustomer.jsp"
+      name="search_mycustomerForm"
+      path="/search_mycustomer"
+      scope="request"
+      type="Admin.Search_mycustomerAction">
+      <set-property property="cancellable" value="true" />
+      <forward
+        name="success"
+        path="/Admin/DisplayTag_mycustomer.jsp"
+        redirect="true" />
+    </action>
+
+  </action-mappings>
+
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+
